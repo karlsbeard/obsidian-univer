@@ -25,10 +25,10 @@ jobs:
         with:
           node-version: 20
           cache: pnpm
-          registry-url: ${{ secrets.VERDACCIO_URL }}
-          scope: '@univerjs-pro'
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.VERDACCIO_TOKEN }}
+          # registry-url: ${{ secrets.VERDACCIO_URL }}
+          # scope: '@univerjs-pro'
+        # env:
+        #   NODE_AUTH_TOKEN: ${{ secrets.VERDACCIO_TOKEN }}
 
       - name: Build
         id: build
