@@ -1,9 +1,11 @@
 name: Release Obsidian plugin
 
 on:
-  push:
-    tags:
-      - '*'
+  # push:
+  #   tags:
+  #     - '*'
+  release:
+    types: [published]
 
 env:
   PLUGIN_NAME: obsidian-univer
