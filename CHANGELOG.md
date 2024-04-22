@@ -1,5 +1,7 @@
 
 
+## [1.0.8](https://github.com/karlsbeard/obsidian-univer/compare/1.0.7...1.0.8) (2024-04-22)
+
 ## [1.0.7](https://github.com/karlsbeard/obsidian-univer/compare/1.0.6...1.0.7) (2024-04-22)
 
 ## [1.0.6](https://github.com/karlsbeard/obsidian-univer/compare/1.0.5...1.0.6) (2024-04-22)
