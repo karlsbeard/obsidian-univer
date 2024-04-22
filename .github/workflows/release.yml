@@ -1,11 +1,9 @@
 name: Release Obsidian plugin
 
 on:
-  # push:
-  #   tags:
-  #     - '*'
-  release:
-    types: [published]
+  push:
+    tags:
+      - '*'
 
 env:
   PLUGIN_NAME: obsidian-univer
@@ -27,8 +25,8 @@ jobs:
         with:
           node-version: 20
           cache: pnpm
-          # registry-url: ${{ secrets.VERDACCIO_URL }}
-          # scope: '@univerjs-pro'
+        #   registry-url: ${{ secrets.VERDACCIO_URL }}
+        #   scope: '@univerjs-pro'
         # env:
         #   NODE_AUTH_TOKEN: ${{ secrets.VERDACCIO_TOKEN }}
 
@@ -38,11 +36,6 @@ jobs:
           pnpm i
           pnpm build
           mkdir ${{ env.PLUGIN_NAME }}
-          echo "Waiting for build files..."
-          while [ ! -f dist/main.js ] || [ ! -f dist/manifest.json ] || [ ! -f dist/styles.css ]; do
-            echo "Still waiting for build files..."
-            sleep 1
-          done
           echo "All build files are ready."
 
       - name: Get latest release upload URL
