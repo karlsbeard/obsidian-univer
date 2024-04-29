@@ -1,5 +1,49 @@
 
 
+## 1.0.3 (2024-04-29)
+
+
+### Bug Fixes
+
+* change the package version ([936fcfe](https://github.com/karlsbeard/obsidian-univer/commit/936fcfecdce5009223c9d6e00db342b5ce390ad3))
+* change the usheet & udoc ([23f5b8d](https://github.com/karlsbeard/obsidian-univer/commit/23f5b8d403d6e49d36c1bb9d606232c9c288fe3f))
+* change version to 0.0.2 ([18477a3](https://github.com/karlsbeard/obsidian-univer/commit/18477a3bd3687e9cdf57635c814ef36b71c7b1aa))
+* find the new tab problem and has make a pr to univer ([dacf1db](https://github.com/karlsbeard/obsidian-univer/commit/dacf1dbde6f4808b5586b4c54458a6a44ef917da))
+* fix lockfile ([b6484c9](https://github.com/karlsbeard/obsidian-univer/commit/b6484c9c0ba7178caf02351de2a89387fecb0da7))
+* fix release ([c9fa50e](https://github.com/karlsbeard/obsidian-univer/commit/c9fa50efa5531f2feea6aa6c4b67b9b1817a3f50))
+* fix the file change problem ([c2a8d24](https://github.com/karlsbeard/obsidian-univer/commit/c2a8d240bca9e3d72532567a5f0bf94e347ce49b))
+* fix the release ([6650856](https://github.com/karlsbeard/obsidian-univer/commit/665085632f3f57212b4639e539d6f0c7cd3225ea))
+* fix the release content ([9d25c1b](https://github.com/karlsbeard/obsidian-univer/commit/9d25c1bad46ba722e7d30e5bf0095c21dbf97bff))
+* fix the xlsx View & make the plugin desktoponly ([#55](https://github.com/karlsbeard/obsidian-univer/issues/55)) ([4d65d89](https://github.com/karlsbeard/obsidian-univer/commit/4d65d893c53ca264d87ac15728cf584ce037239e))
+* lint & locales bug ([75cb284](https://github.com/karlsbeard/obsidian-univer/commit/75cb28424625b5643da7c58d407d3ef3b206ce41))
+* remove the consolelog ([3a9f754](https://github.com/karlsbeard/obsidian-univer/commit/3a9f754317c9ee3b79b732af58a76d80f763d9e6))
+* update the version & fix the css ([335dd8b](https://github.com/karlsbeard/obsidian-univer/commit/335dd8b575d3544930479fc32d897a65d01eff7b))
+
+
+### Features
+
+* add release workflow ([c66d1ed](https://github.com/karlsbeard/obsidian-univer/commit/c66d1edcf1b7c35f098691c4d38bb8a6eab6a281))
+* add support for opening .xlsx files ([#54](https://github.com/karlsbeard/obsidian-univer/issues/54)) ([dc9e8dd](https://github.com/karlsbeard/obsidian-univer/commit/dc9e8dd459b0a96ee7e98287f32c2314ef6392a3))
+* add the container resizeobserver ([7b94009](https://github.com/karlsbeard/obsidian-univer/commit/7b94009736d147934a056a49022c640dffafbd2f))
+* add the debounce data save ([eefdb00](https://github.com/karlsbeard/obsidian-univer/commit/eefdb003a54efa8d83f509d593470d5e764efcf5))
+* add the docs save func ([f9fb09e](https://github.com/karlsbeard/obsidian-univer/commit/f9fb09eb549f62f5daad0f6ffc62466277ad2fd5))
+* add the export feature ([#58](https://github.com/karlsbeard/obsidian-univer/issues/58)) ([ba1a8a2](https://github.com/karlsbeard/obsidian-univer/commit/ba1a8a2ce5548075741913edae52f93850895867))
+* add the formula worker ([f4cc821](https://github.com/karlsbeard/obsidian-univer/commit/f4cc821cd3bb64c8425f58c8c7bbfb68babb9e78))
+* add the i18n option ([36e07c5](https://github.com/karlsbeard/obsidian-univer/commit/36e07c551b11663a372e8d08a0eebe6db8de034a))
+* add the manifest to root content ([7f2840c](https://github.com/karlsbeard/obsidian-univer/commit/7f2840c32fa76ea6a259e93f3f9303adcf9520f5))
+* add the min rowCount & columnCount of the default workbookData ([#59](https://github.com/karlsbeard/obsidian-univer/issues/59)) ([8483b69](https://github.com/karlsbeard/obsidian-univer/commit/8483b696dd5dfdf49d9e8232138b08507b40cab5))
+* add the new excel feature ([#63](https://github.com/karlsbeard/obsidian-univer/issues/63)) ([436c15f](https://github.com/karlsbeard/obsidian-univer/commit/436c15f07bb9c617db1b781c76b8d5035154243e))
+* add the release npm token ([9632779](https://github.com/karlsbeard/obsidian-univer/commit/96327795ccdbf31a5d28ba8ec5cff5692efdff12))
+* add the univer.css ([885e04f](https://github.com/karlsbeard/obsidian-univer/commit/885e04f6965ec7506e46cbed6674b507c7069045))
+* add the xlsx support setting taps ([#56](https://github.com/karlsbeard/obsidian-univer/issues/56)) ([35b70fb](https://github.com/karlsbeard/obsidian-univer/commit/35b70fb6ea8611a1233020e10059ff3a0674425a))
+* init repo ([34a70ac](https://github.com/karlsbeard/obsidian-univer/commit/34a70ace03ef718a9aa561d852cb29e9a5d80c12))
+* make the panel align correct ([075a049](https://github.com/karlsbeard/obsidian-univer/commit/075a049d1c10ee880f6b67cb641ed28c628be13f))
+* remove template feature ([1a83202](https://github.com/karlsbeard/obsidian-univer/commit/1a8320266eaee60c789887947bf2471f8b8fb94a))
+* remove workerjs ([d1f9eb1](https://github.com/karlsbeard/obsidian-univer/commit/d1f9eb1454866fe57b13df992b7a043ea2f62618))
+* try to fix the newtab problem ([2a67b94](https://github.com/karlsbeard/obsidian-univer/commit/2a67b9426fe69bccde2b5e3357e46882460db949))
+* update the sheet & doc version ([7b6a678](https://github.com/karlsbeard/obsidian-univer/commit/7b6a67857ecc50acf712c4978ca70266ff5fa6e5))
+* update the version setting ([f89043f](https://github.com/karlsbeard/obsidian-univer/commit/f89043fbb146aaa71804a34b1435db77a64c9948))
+
 ## [1.0.2](https://github.com/dream-num/obsidian-univer/compare/1.0.1...1.0.2) (2024-04-22)
 
 
