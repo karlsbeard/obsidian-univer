@@ -21,6 +21,7 @@ import { UniverRenderEnginePlugin } from '@univerjs/engine-render'
 import { UniverFormulaEnginePlugin } from '@univerjs/engine-formula'
 
 import { defaultTheme } from '@univerjs/design'
+import type { IUniverUIConfig } from '@univerjs/ui'
 import { UniverUIPlugin } from '@univerjs/ui'
 
 import { UniverDocsPlugin } from '@univerjs/docs'
@@ -42,7 +43,6 @@ import { UniverSheetsDataValidationPlugin } from '@univerjs/sheets-data-validati
 import { UniverSheetsZenEditorPlugin } from '@univerjs/sheets-zen-editor'
 import { UniverSheetsSortUIPlugin } from '@univerjs/sheets-sort-ui'
 import { UniverSheetsDrawingUIPlugin } from '@univerjs/sheets-drawing-ui'
-import type { IUniverUIConfig } from '@univerjs/ui/lib/types/controllers/ui/ui.controller'
 import { getLanguage, univerLocales } from '@/utils/common'
 import type { UniverPluginSettings } from '@/types/setting'
 import { ExchangePlugin } from '@/plugins/ExchangePlugin'

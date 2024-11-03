@@ -1,7 +1,8 @@
-import { Disposable, ICommandService, Inject, Injector, LifecycleStages, OnLifecycle } from '@univerjs/core'
+import { Disposable, ICommandService, Inject, Injector, LifecycleStages } from '@univerjs/core'
 import type { IMenuItemFactory } from '@univerjs/ui'
 import { IMenuService } from '@univerjs/ui'
 import { ExchangeClientDownloadJsonOperation, ExchangeClientUploadJsonOperation } from '../commands/exchange.operation'
+import { OnLifecycle } from '../services/lifeCycle/lifecycle'
 import { ExchangeDownloadJsonMenuItemFactory, ExchangeMenuItemFactory, ExchangeUploadJsonMenuItemFactory } from './menu'
 
 @OnLifecycle(LifecycleStages.Steady, ExchangeController)

@@ -6,7 +6,7 @@ import { TextFileView } from 'obsidian'
 import { FUniver } from '@univerjs/facade'
 import type { UniverPluginSettings } from '@/types/setting'
 import { sheetInit } from '@/univer/sheets'
-import { fillDefaultSheetBlock } from '@/utils/snapshot'
+import { fillDefaultSheetBlock } from '@/utils/snapshot/snapshot'
 
 export const Type = 'univer-sheet'
 

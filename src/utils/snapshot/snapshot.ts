@@ -1,7 +1,12 @@
 /* eslint-disable jsdoc/require-returns-description */
-import type { ILogContext, ISnapshotServerService, IWorkbookData, Nullable } from '@univerjs/core'
-import { ClientSnapshotServerService, b64DecodeUnicode, b64EncodeUnicode, getSheetBlocksFromSnapshot, textDecoder, textEncoder, transformSnapshotToWorkbookData, transformWorkbookDataToSnapshot } from '@univerjs/core'
+import type { IWorkbookData, Nullable } from '@univerjs/core'
+// import { ClientSnapshotServerService, b64DecodeUnicode, b64EncodeUnicode, getSheetBlocksFromSnapshot, textDecoder, textEncoder, transformSnapshotToWorkbookData, transformWorkbookDataToSnapshot } from '@univerjs/core'
+import type { ILogContext } from '@univerjs/core/lib/types/services/log/context'
 import type { ISheetBlock, ISnapshot, IWorkbookMeta, IWorksheetMeta } from '@univerjs/protocol'
+import { ClientSnapshotServerService, type ISnapshotServerService } from './snapshot-server.service'
+import { textDecoder, textEncoder } from './snapshot-utils'
+import { b64DecodeUnicode, b64EncodeUnicode } from './coder'
+import { getSheetBlocksFromSnapshot, transformSnapshotToWorkbookData, transformWorkbookDataToSnapshot } from './snapshot-transform'
 
 export interface WorksheetMetaJson extends Omit<IWorksheetMeta, 'originalMeta'> {
   originalMeta: string
@@ -182,7 +187,6 @@ export async function transformWorkbookDataToSnapshotJson(workbookData: IWorkboo
 
   const unitID = workbookData.id
   const rev = workbookData.rev ?? 0
-
   const snapshotService: ISnapshotServerService = new ClientSnapshotServerService()
 
   const { snapshot } = await transformWorkbookDataToSnapshot(context, workbookData, unitID, rev, snapshotService)

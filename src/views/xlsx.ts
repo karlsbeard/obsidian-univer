@@ -4,7 +4,7 @@ import { TextFileView } from 'obsidian'
 import { FUniver } from '@univerjs/facade'
 import type { UniverPluginSettings } from '@/types/setting'
 import { sheetInit } from '@/univer/sheets'
-import { fillDefaultSheetBlock, transformSnapshotJsonToWorkbookData, transformWorkbookDataToSnapshotJson } from '@/utils/snapshot'
+import { fillDefaultSheetBlock, transformSnapshotJsonToWorkbookData, transformWorkbookDataToSnapshotJson } from '@/utils/snapshot/snapshot'
 import { transformToExcelBuffer } from '@/utils/file'
 
 export const Type = 'univer-xlsx'
