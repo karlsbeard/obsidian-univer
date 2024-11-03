@@ -1,5 +1,5 @@
 import type { IWorkbookData, Univer, Workbook } from '@univerjs/core'
-import { IUniverInstanceService, Tools, UniverInstanceType } from '@univerjs/core'
+import { IUniverInstanceService, UniverInstanceType, generateRandomId } from '@univerjs/core'
 import type { TFile, WorkspaceLeaf } from 'obsidian'
 
 import { TextFileView } from 'obsidian'
@@ -78,7 +78,7 @@ export class USheetView extends TextFileView {
     else if (data)
       sheetData = JSON.parse(data)
     else
-      sheetData = { id: Tools.generateRandomId(6) } as IWorkbookData
+      sheetData = { id: generateRandomId(6) } as IWorkbookData
     const filledWorkbookData = fillDefaultSheetBlock(sheetData)
     this.univer.createUnit(UniverInstanceType.UNIVER_SHEET, filledWorkbookData)
 

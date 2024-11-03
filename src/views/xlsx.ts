@@ -1,10 +1,10 @@
-import { IUniverInstanceService, type IWorkbookData, type Nullable, Tools, type Univer, UniverInstanceType, type Workbook } from '@univerjs/core'
+import { IUniverInstanceService, type IWorkbookData, type Nullable, type Univer, UniverInstanceType, type Workbook, generateRandomId } from '@univerjs/core'
 import type { TFile, WorkspaceLeaf } from 'obsidian'
 import { TextFileView } from 'obsidian'
 import { FUniver } from '@univerjs/facade'
 import type { UniverPluginSettings } from '@/types/setting'
 import { sheetInit } from '@/univer/sheets'
-import { fillDefaultSheetBlock, transformSnapshotJsonToWorkbookData, transformWorkbookDataToSnapshotJson } from '@/utils/snapshot'
+import { fillDefaultSheetBlock, transformWorkbookDataToSnapshotJson } from '@/utils/snapshot'
 import { transformToExcelBuffer } from '@/utils/file'
 
 export const Type = 'univer-xlsx'
@@ -13,7 +13,7 @@ export class XlsxTypeView extends TextFileView {
   univer: Univer
   workbook: Workbook
   workbookData: Nullable<IWorkbookData>
-  FUniver: FUniver
+  FUniver: any
   settings: UniverPluginSettings
   legacyFile: TFile
   private isFileDeleted: boolean = false
@@ -109,18 +109,20 @@ export class XlsxTypeView extends TextFileView {
     }
     this.univer = sheetInit(options, this.settings)
 
+    const univerApi = FUniver.newAPI(this.univer)
     this.FUniver = FUniver.newAPI(this.univer)
     this.univerInstanceService = this.univer.__getInjector().get(IUniverInstanceService)
 
     const raw = await this.app.vault.readBinary(this.legacyFile)
     if (raw.byteLength !== 0) {
+      this.workbookData = this.FUniver.importXLSXToSnapshot(raw)
       // @ts-expect-error
-      const transformData = await window.univerProExchangeImport(raw)
-      const jsonData = JSON.parse(transformData)
-      this.workbookData = transformSnapshotJsonToWorkbookData(jsonData.snapshot, jsonData.sheetBlocks)
+      // const transformData = await window.univerProExchangeImport(raw)
+      // const jsonData = JSON.parse(transformData)
+      // this.workbookData = transformSnapshotJsonToWorkbookData(jsonData.snapshot, jsonData.sheetBlocks)
     }
 
-    const workbookData = this.workbookData || { id: Tools.generateRandomId(6) } as IWorkbookData
+    const workbookData = this.workbookData || { id: generateRandomId(6) } as IWorkbookData
     const filledWorkbookData = fillDefaultSheetBlock(workbookData)
     this.univer.createUnit(UniverInstanceType.UNIVER_SHEET, filledWorkbookData)
   }

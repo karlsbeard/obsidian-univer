@@ -22,7 +22,7 @@ export class UDocView extends TextFileView {
 
   getViewData(): string {
     const resourceLoaderService = this.univer.__getInjector().get(IResourceLoaderService)
-    const snapshot = resourceLoaderService.saveDoc(this.documentModal)
+    const snapshot = resourceLoaderService.saveUnit(this.documentModal.getUnitId())
     return JSON.stringify(Tools.deepClone(snapshot))
   }
 
